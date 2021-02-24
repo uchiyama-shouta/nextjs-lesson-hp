@@ -41,7 +41,7 @@ const Post = ({ post }) => {
 
 export default Post;
 
-export async const getStaticPaths = () => {
+export const getStaticPaths = async () => {
 	const paths = await getAllPostsIds();
 
 	return {
@@ -50,7 +50,7 @@ export async const getStaticPaths = () => {
 	};
 }
 
-export async const getStaticProps = ({ params }) =>  {
+export const getStaticProps = async ({ params }) =>  {
 	const { post: post } = await getPostsData(params.id);
 
 	return {
