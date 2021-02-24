@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Layout from "../../component/Layout";
+import Layout from "../../components/Layout";
 import { getAllPostsIds, getPostsData } from "../../lib/posts";
 
 const Post = ({ post }) => {
